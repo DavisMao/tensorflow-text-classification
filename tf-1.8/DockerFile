@@ -1,0 +1,11 @@
+FROM docker.io/tensorflow/tensorflow:1.8.0-py3
+
+RUN pip install tensorflow-hub && pip install seaborn
+
+ADD cmd.sh /cmd.sh 
+
+ADD downloader.py /downloader.py
+
+RUN chmod +x /cmd.sh
+
+RUN /cmd.sh
