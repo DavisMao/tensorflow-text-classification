@@ -12,6 +12,7 @@ RUN cd /home/install/imutils-0.4.6 && python3 setup.py install
 RUN cd /home/install/networkx-2.1 && python3 setup.py install
 RUN cd /home/install/pycocotools-2.0.0 && python3 setup.py install
 RUN cd /home/install/skimage-0.0 && python setup.py install sdist
+RUN mkdir /my_module_cache
 ADD cmd.sh /cmd.sh 
 
 ADD downloader.py /downloader.py
